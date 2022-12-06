@@ -46,7 +46,7 @@ class Adresseliste:         #Oppretter klassen for adresselisten
         return(self.bib)            #Returnerer biblioteket med all dataen
 
 
-    def søk(self):      #Lager en funksjon for å søke etter informasjon
+    def sok(self):      #Lager en funksjon for å søke etter informasjon
         s1 = Adresseliste()
         teller = 0
         navneliste = s1.sorter()["Navn"]        
@@ -74,4 +74,4 @@ l1 = Adresseliste()             #Aktiverer klassen og printer ut lengden av adre
 print("Lengden av adresselisten er ", len(l1.lagliste()))
 søk = str(input("Hva eller hvem vil du finne i adresselisten? \n>> "))      #Aktiverer søk
 søker = Adresseliste(søk)
-søker.søk()
+søker.sok()

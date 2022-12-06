@@ -33,9 +33,6 @@ class Adresseliste:         #Oppretter klassen for adresselisten
         
         for i in range(0, len(csvfil())):       #Går gjennom csv filen i en løkke og appender i "liste"
             liste.append(csvfil()[i])
-        
-        self.fjern = [item for item, count in collections.Counter(liste).items() if count > 1]      #Finner likheter...
-        liste.remove(self.fjern)        #...og fjerner de
 
         return(liste)           #Returnerer all dataen i en liste
 
@@ -73,8 +70,6 @@ class Adresseliste:         #Oppretter klassen for adresselisten
         if teller == 0:         #Sier i fra om søket ikke er i listen
             print("Ingen på Adresselisten har dette Navnet/adressen/postnummeret")
 
-        print("Gjenngående adresser", self.fjern)       #Printer hvem som er like i listene
-        
 l1 = Adresseliste()             #Aktiverer klassen og printer ut lengden av adresselisten
 print("Lengden av adresselisten er ", len(l1.lagliste()))
 søk = str(input("Hva eller hvem vil du finne i adresselisten? \n>> "))      #Aktiverer søk

@@ -17,10 +17,6 @@ def txtfil():
 
 class Adresseliste:
     def __init__(self, søk=0):
-        #self.navn = navn
-        #self.etternavn = etternavn
-        #self.gate = gate
-        #self.postnummer = postnummer
         self.søk = søk
         self.bib = {"Navn": [], "Adresse": [], "Postnummer": []}
 
@@ -36,6 +32,7 @@ class Adresseliste:
         
         for i in range(0, len(csvfil())):
             liste.append(csvfil()[i])
+
         return(liste)
     
     def sorter(self):
@@ -72,11 +69,8 @@ class Adresseliste:
         if teller == 0:
             print("Ingen på Adresselisten har dette Navnet/adressen/postnummeret")
         
-
-s1 = Adresseliste()
-s1.sorter()
-
-
-#søk = str(input("Hva eller hvem vil du finne i adresselisten? \n>> "))
-#søker = Adresseliste(søk)
-#søker.sok()
+l1 = Adresseliste()
+print("Lengden av adresselisten er ", len(l1.lagliste()))
+søk = str(input("Hva eller hvem vil du finne i adresselisten? \n>> "))
+søker = Adresseliste(søk)
+søker.sok()
